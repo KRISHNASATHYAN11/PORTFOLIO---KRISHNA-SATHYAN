@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import schoolwebapp from "../assets/schoolwebapp.png";
+import muddie from "../assets/muddie.png";
+import calldriver from "../assets/calldriver.jpeg";
+import splendid from "../assets/splendid.png";
 
 // Mock Data - Updated with your local file paths
 const resumeData = {
@@ -8,25 +12,25 @@ const resumeData = {
       id: 1,
       title: "School Web App",
       category: "Education",
-      img: "../src/assets/schoolwebapp.png",
+      img: schoolwebapp,
     },
     {
       id: 4,
       title: "Muddie",
       category: "Service",
-      img: "../src/assets/muddie.png",
+      img: muddie,
     },
     {
       id: 2,
       title: "Call Driver",
       category: "Service",
-      img: "../src/assets/calldriver.jpeg",
+      img: calldriver,
     },
     {
       id: 3,
       title: "Splendid",
       category: "Lifestyle",
-      img: "../src/assets/splendid.png",
+      img: splendid,
     },
   ],
 };
