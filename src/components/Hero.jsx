@@ -8,9 +8,12 @@ import {
   FaLinkedin,
   FaGithub,
   FaHandPaper,
+  FaFileAlt, // Added for Resume icon
+  FaDownload, // Added for Download icon
 } from "react-icons/fa";
 import Button from "../ui/Button";
 import krishna from "../assets/krishnasathyann.jpeg";
+import resume from "../assets/resume.pdf";
 
 // --- 1. Animated Social Component ---
 const SocialDock = () => {
@@ -406,17 +409,26 @@ const Hero = () => {
             variants={itemVariants}
             style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}
           >
-            <Button primary>
-              View Work{" "}
-              <i
-                className="fas fa-arrow-right"
-                style={{ marginLeft: "8px" }}
-              ></i>
-            </Button>
-            <Button>
-              Save{" "}
-              <i className="fas fa-download" style={{ marginLeft: "8px" }}></i>
-            </Button>
+            <a
+              href={resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <Button primary>
+                Resume <FaFileAlt style={{ marginLeft: "8px" }} />
+              </Button>
+            </a>
+
+            <a
+              href={resume}
+              download="Krishna_Sathyan_Resume.pdf"
+              style={{ textDecoration: "none" }}
+            >
+              <Button>
+                Download <FaDownload style={{ marginLeft: "8px" }} />
+              </Button>
+            </a>
           </motion.div>
 
           {/* --- SOCIAL DOCK --- */}
