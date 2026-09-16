@@ -41,11 +41,7 @@ const Vine = ({ side = "left" }) => {
           stroke="currentColor"
           strokeWidth="4"
           strokeLinecap="round"
-          initial={
-            shouldReduceMotion
-              ? { pathLength: 1 }
-              : { pathLength: 0 }
-          }
+          initial={shouldReduceMotion ? { pathLength: 1 } : { pathLength: 0 }}
           whileInView={{ pathLength: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 2.5, ease: "easeInOut" }}
@@ -93,9 +89,7 @@ const Vine = ({ side = "left" }) => {
             rx="23"
             ry="10"
             transform={
-              side === "left"
-                ? "rotate(-35 18 92)"
-                : "rotate(35 202 92)"
+              side === "left" ? "rotate(-35 18 92)" : "rotate(35 202 92)"
             }
           />
 
@@ -105,9 +99,7 @@ const Vine = ({ side = "left" }) => {
             rx="23"
             ry="10"
             transform={
-              side === "left"
-                ? "rotate(35 188 181)"
-                : "rotate(-35 32 181)"
+              side === "left" ? "rotate(35 188 181)" : "rotate(-35 32 181)"
             }
           />
 
@@ -117,51 +109,24 @@ const Vine = ({ side = "left" }) => {
             rx="23"
             ry="10"
             transform={
-              side === "left"
-                ? "rotate(-35 13 340)"
-                : "rotate(35 207 340)"
+              side === "left" ? "rotate(-35 13 340)" : "rotate(35 207 340)"
             }
           />
         </g>
 
         {/* Small grape clusters */}
         <g fill="#725568">
-          <circle
-            cx={side === "left" ? "35" : "185"}
-            cy="130"
-            r="6"
-          />
-          <circle
-            cx={side === "left" ? "48" : "172"}
-            cy="135"
-            r="6"
-          />
-          <circle
-            cx={side === "left" ? "61" : "159"}
-            cy="130"
-            r="6"
-          />
-          <circle
-            cx={side === "left" ? "42" : "178"}
-            cy="147"
-            r="6"
-          />
-          <circle
-            cx={side === "left" ? "54" : "166"}
-            cy="151"
-            r="6"
-          />
-          <circle
-            cx={side === "left" ? "48" : "172"}
-            cy="163"
-            r="6"
-          />
+          <circle cx={side === "left" ? "35" : "185"} cy="130" r="6" />
+          <circle cx={side === "left" ? "48" : "172"} cy="135" r="6" />
+          <circle cx={side === "left" ? "61" : "159"} cy="130" r="6" />
+          <circle cx={side === "left" ? "42" : "178"} cy="147" r="6" />
+          <circle cx={side === "left" ? "54" : "166"} cy="151" r="6" />
+          <circle cx={side === "left" ? "48" : "172"} cy="163" r="6" />
         </g>
       </svg>
     </motion.div>
   );
 };
-
 
 /* =========================================================
    FLOATING LEAF
@@ -194,7 +159,6 @@ const FloatingLeaf = ({ className, delay = 0 }) => {
   );
 };
 
-
 /* =========================================================
    LITTLE PLANT
 ========================================================= */
@@ -219,7 +183,6 @@ const MiniPlant = ({ className }) => {
     </motion.div>
   );
 };
-
 
 /* =========================================================
    PROJECT CARD
@@ -278,9 +241,7 @@ const ProjectCard = ({ project, index }) => {
 
       <div
         className={`project-image-new ${
-          project.type === "mobile"
-            ? "project-mobile"
-            : "project-web"
+          project.type === "mobile" ? "project-mobile" : "project-web"
         }`}
       >
         {/* Botanical corner */}
@@ -294,6 +255,8 @@ const ProjectCard = ({ project, index }) => {
         <motion.img
           src={project.img}
           alt={`${project.title} project preview`}
+          loading="lazy"
+          decoding="async"
           whileHover={
             shouldReduceMotion
               ? {}
@@ -307,28 +270,20 @@ const ProjectCard = ({ project, index }) => {
         {/* Image overlay */}
         <div className="image-overlay">
           <span>
-            {project.type === "mobile"
-              ? "MOBILE APP"
-              : "WEB EXPERIENCE"}
+            {project.type === "mobile" ? "MOBILE APP" : "WEB EXPERIENCE"}
           </span>
         </div>
       </div>
-
 
       {/* =================================================
           CONTENT
       ================================================= */}
 
       <div className="project-info">
-
         <div className="project-top-line">
-          <span className="project-category-new">
-            {project.category}
-          </span>
+          <span className="project-category-new">{project.category}</span>
 
-          <span className="project-sprout">
-            🌱
-          </span>
+          <span className="project-sprout">🌱</span>
         </div>
 
         <h3>{project.title}</h3>
@@ -336,7 +291,6 @@ const ProjectCard = ({ project, index }) => {
         <p>{project.desc}</p>
 
         <div className="project-bottom">
-
           <button
             type="button"
             className="project-button"
@@ -352,19 +306,14 @@ const ProjectCard = ({ project, index }) => {
             <span>⌁</span>
             <span>🍃</span>
           </div>
-
         </div>
       </div>
 
       {/* Bottom botanical decoration */}
-      <div className="card-leaf-decoration">
-        🍃
-      </div>
-
+      <div className="card-leaf-decoration">🍃</div>
     </motion.article>
   );
 };
-
 
 /* =========================================================
    MAIN COMPONENT
@@ -408,8 +357,7 @@ const Projects = () => {
       state.moved = true;
     }
 
-    e.currentTarget.scrollLeft =
-      state.startScrollLeft - distance * 1.25;
+    e.currentTarget.scrollLeft = state.startScrollLeft - distance * 1.25;
   };
 
   const handlePointerUp = (e) => {
@@ -493,7 +441,6 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects-garden">
-
       {/* Decorative background */}
       <div className="garden-glow garden-glow-one" />
       <div className="garden-glow garden-glow-two" />
@@ -503,32 +450,19 @@ const Projects = () => {
       <Vine side="right" />
 
       {/* Floating leaves */}
-      <FloatingLeaf
-        className="leaf-one"
-        delay={0}
-      />
+      <FloatingLeaf className="leaf-one" delay={0} />
 
-      <FloatingLeaf
-        className="leaf-two"
-        delay={1}
-      />
+      <FloatingLeaf className="leaf-two" delay={1} />
 
-      <FloatingLeaf
-        className="leaf-three"
-        delay={2}
-      />
+      <FloatingLeaf className="leaf-three" delay={2} />
 
-      <FloatingLeaf
-        className="leaf-four"
-        delay={1.5}
-      />
+      <FloatingLeaf className="leaf-four" delay={1.5} />
 
       {/* Decorative plants */}
       <MiniPlant className="plant-one" />
       <MiniPlant className="plant-two" />
 
       <div className="projects-garden-container">
-
         {/* =================================================
             HEADING
         ================================================= */}
@@ -562,11 +496,10 @@ const Projects = () => {
           </h2>
 
           <p>
-            From the first line of code to the final interface,
-            these are some of the digital experiences I've cultivated.
+            From the first line of code to the final interface, these are some
+            of the digital experiences I've cultivated.
           </p>
         </motion.div>
-
 
         {/* =================================================
             PROJECTS
@@ -581,17 +514,10 @@ const Projects = () => {
           onPointerCancel={handlePointerCancel}
           onClickCapture={handleClickCapture}
         >
-
           {resumeData.projects.map((project, index) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              index={index}
-            />
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
-
         </div>
-
 
         {/* =================================================
             SCROLL INDICATOR
@@ -624,9 +550,7 @@ const Projects = () => {
 
           <span className="scroll-arrow">→</span>
         </motion.div>
-
       </div>
-
 
       {/* =================================================
           STYLES

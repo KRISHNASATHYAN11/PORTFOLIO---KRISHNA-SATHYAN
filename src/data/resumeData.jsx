@@ -1,7 +1,7 @@
-import sportifyimg from "../assets/sportifyimg.png";
-import bookclubimg from "../assets/bookclubimg.png";
-import buildmanagerimg from "../assets/buildmanagerimg.jpeg";
-import schoolwebappimg from "../assets/schoolwebapp.png";
+import sportifyimg from "../assets/sportifyimg.webp";
+import bookclubimg from "../assets/bookclubimg.webp";
+import buildmanagerimg from "../assets/buildmanagerimg.webp";
+import schoolwebappimg from "../assets/schoolwebapp.webp";
 
 export const resumeData = {
   name: "Krishna Sathyan",
