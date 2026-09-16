@@ -1,78 +1,106 @@
+import sportifyimg from "../assets/sportifyimg.png";
+import bookclubimg from "../assets/bookclubimg.png";
+import buildmanagerimg from "../assets/buildmanagerimg.jpeg";
+import schoolwebappimg from "../assets/schoolwebapp.png";
+
 export const resumeData = {
-  name: "KRISHNA SATHYAN",
-  role: "Junior Software Developer",
-  about:
-    "As a Junior Software Developer, I bridge the gap between design and technology. I love creating interfaces that are not only functional but also delightful to use.",
-  // --- SKILLS ---
-  skills: [
-    { name: "HTML5", icon: "fa-html5" },
-    { name: "CSS3", icon: "fa-css3-alt" },
-    { name: "JavaScript", icon: "fa-js" },
-    { name: "React", icon: "fa-react" },
-    { name: "React Native", icon: "fa-mobile-alt" },
-    { name: "TypeScript", icon: "fa-terminal" },
-    { name: "Node.js", icon: "fa-node" },
-    { name: "Express.js", icon: "fa-cogs" },
-    { name: "MongoDB", icon: "fa-database" },
-    { name: "Mobile Apps", icon: "fa-mobile-alt" },
-    { name: "UI Design", icon: "fa-paint-brush" },
-  ],
-  // --- EXPERIENCE ---
+  name: "Krishna Sathyan",
+  role: "Software Developer",
+  
+  // Theme & Headings
+  hero: {
+    greeting: "🌱 Growing ideas in both",
+    title: "Nature & Code",
+    tagline: "Bridging the gap between organic design and digital logic. I cultivate clean code and user-friendly interfaces with the patience of a gardener.",
+    badges: [
+      { text: "Botany Graduate", icon: "fa-seedling", color: "badge-green" },
+      { text: "Software Developer", icon: "fa-code", color: "badge-brown" }
+    ]
+  },
+
+skills: [
+  // Tech Stack
+  { name: "HTML5", icon: "fa-html5", prefix: "fab" },
+  { name: "CSS3", icon: "fa-css3-alt", prefix: "fab" },
+  { name: "JavaScript", icon: "fa-js", prefix: "fab" },
+  { name: "React", icon: "fa-react", prefix: "fab" },
+  { name: "Node.js", icon: "fa-node", prefix: "fab" },
+  { name: "MongoDB", icon: "fa-database", prefix: "fas" },
+  { name: "TypeScript", icon: "fa-terminal", prefix: "fas" },
+  { name: "Git", icon: "fa-git-alt", prefix: "fab" },
+
+  // Beyond Code
+  { name: "UI Design", icon: "fa-paint-brush", prefix: "fas" },
+  { name: "Photography", icon: "fa-camera", prefix: "fas" },
+  { name: "Gardening", icon: "fa-tree", prefix: "fas" },
+],
+
+  // Experience (Cloud Forest Removed)
   experience: [
     {
       id: 1,
       title: "Junior Software Developer",
-      company: "Cloud Forest Innovations",
-
-      desc: "Developed full-stack web applications using MERN stack (MongoDB, Express.js, React.js, Node.js). Built React.js UIs and React Native (TypeScript) mobile features. Designed and implemented REST APIs and backend services. Worked with MongoDB (schema design, CRUD, query optimization). Implemented JWT authentication & role-based access control. Integrated real-time features (maps, live tracking, notifications). Followed Agile methodology, Git workflows, and clean code practices.",
-      icon: "fa-laptop-code",
+      company: "Freelance / Remote",
+      date: "2023 - Present",
+      desc: "Developing modern, responsive web applications for clients. Specializing in React.js front-end architecture and Node.js backends. Focusing on performance, accessibility, and organic user growth."
     },
     {
       id: 2,
       title: "MERN Stack Intern",
       company: "Luminar Technolab",
-
-      desc: "Developed responsive UI using React.js and Tailwind CSS. Built backend APIs using Node.js & Express.js. Performed CRUD operations with MongoDB. Worked on Book Club & Sports Community applications. Gained experience in API integration, authentication, and component architecture.",
-      icon: "fa-code",
-    },
-  ],
-
-  // --- PROJECTS ---
-  projects: [
-    {
-      id: 1,
-      title: "CALLDRIVER",
-      category: "Driver Booking Mobile Application",
-      img: "https://picsum.photos/seed/driver/400/300",
-      desc: "Developed a React Native mobile application (TypeScript) to connect users with on-demand drivers for their personal vehicles. Implemented real-time location tracking using maps integration for accurate driver-user coordination. Built live notification system for booking updates and driver status. Designed scalable architecture with focus on performance, usability, and real-time data handling. Key Features: Driver discovery, live tracking, booking management, notifications.",
-    },
-    {
-      id: 2,
-      title: "BOOK CLUB",
-      category: "Web Application",
-      img: "https://picsum.photos/seed/books/400/300",
-      desc: "Developed a book marketplace platform with features to browse, buy, and sell books. Built using React.js, Tailwind CSS, Node.js, Express.js, and MongoDB. Implemented CRUD operations, authentication, and API integration. Designed responsive UI/UX for seamless user experience.",
+      date: "2022 - 2023",
+      desc: "Gained foundational knowledge in full-stack development. Built dynamic projects including book clubs and community apps using MongoDB, Express, React, and Node."
     },
     {
       id: 3,
-      title: "SPLENDID",
-      category: "Catering Management Web App",
-      img: "https://picsum.photos/seed/catering/400/300",
-      desc: "Developed a single-user web application to manage catering operations efficiently. Implemented modules for dish listing, recipe management, and ingredient calculation. Automated cost estimation and purchase planning for better resource management. Focused on improving workflow efficiency and data organization.",
-    },
-    {
-      id: 4,
-      title: "MUDDIE",
-      category: "Local Car Wash Booking Platform",
-      img: "https://picsum.photos/seed/carwash/400/300",
-      desc: "Built a localized web application for booking car wash services based on vehicle type. Implemented service categorization and dynamic pricing. Designed user-friendly interface for quick booking and service selection. Improved local service accessibility through simple and efficient UI.",
-    },
-    {
-      id: 5,
-      title: "SCHOOL MANAGEMENT",
-      category: "Educational Web Application",
-      img: "https://picsum.photos/seed/school/400/300",
-      desc: "Developed a centralized system to manage school operations for admins, teachers, students, and parents. Implemented modules for attendance, communication, activity tracking, and academic management. Enabled real-time updates and streamlined workflows across all users. Focused on data organization, role-based access, and usability.",
-    },
+      title: "Bachelor of Science in Botany",
+      company: "University of Kerala",
+      date: "2019 - 2022",
+      desc: "Graduated with distinction. Developed analytical skills and a deep understanding of biological systems, now applied to solving complex algorithmic problems."
+    }
   ],
+projects: [
+  {
+    id: 1,
+    title: "Sportify",
+    category: "Sports Community Web Application",
+    img: sportifyimg,
+    type: "web",
+    desc: "A full-stack sports community platform connecting players, teams, tournaments, and sports venues. Features include turf discovery and booking, events, team creation, player profiles, tournaments, and admin management."
+  },
+
+  {
+    id: 2,
+    title: "BookClub",
+    category: "Book Marketplace Web Application",
+    img: bookclubimg,
+    type: "web",
+    desc: "A book marketplace web application where users can discover, buy, and sell books online, with an intuitive interface for browsing books and managing listings."
+  },
+
+  {
+    id: 3,
+    title: "BuildManager",
+    category: "Construction Management Mobile App",
+    img: buildmanagerimg,
+    type: "mobile",
+    desc: "A mobile application designed to help contractors manage clients, purchases, expenses, income, calculations, and project-related details efficiently in one place."
+  },
+
+  {
+    id: 4,
+    title: "School Web App",
+    category: "School Management Web Application",
+    img: schoolwebappimg,
+    type: "web",
+    desc: "A school management platform that brings students, parents, and teachers together in one place to simplify communication, student information, academic activities, and daily administration."
+  }
+],
+
+  // Socials
+  socials: [
+    { name: "GitHub", icon: "fa-github", url: "https://github.com/KRISHNASATHYAN11" },
+    { name: "LinkedIn", icon: "fa-linkedin-in", url: "https://www.linkedin.com/in/krishnasathyan07" },
+    { name: "Email", icon: "fa-envelope", url: "mailto:krishnasathyan11@gmail.com" },
+  ]
 };
