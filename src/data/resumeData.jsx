@@ -41,14 +41,14 @@ skills: [
       id: 1,
       title: "Junior Software Developer",
       company: "Freelance / Remote",
-      date: "2023 - Present",
+      date: "2026 - Present",
       desc: "Developing modern, responsive web applications for clients. Specializing in React.js front-end architecture and Node.js backends. Focusing on performance, accessibility, and organic user growth."
     },
     {
       id: 2,
       title: "MERN Stack Intern",
       company: "Luminar Technolab",
-      date: "2022 - 2023",
+      date: "2025 - 2026",
       desc: "Gained foundational knowledge in full-stack development. Built dynamic projects including book clubs and community apps using MongoDB, Express, React, and Node."
     },
     {
