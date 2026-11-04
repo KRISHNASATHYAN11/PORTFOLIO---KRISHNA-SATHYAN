@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
-const Toast = ({ message, show, onClose }) => {
+
+const Toast = ({ message, show}) => {
   return (
     <motion.div
       initial={{ x: 150, opacity: 0 }}

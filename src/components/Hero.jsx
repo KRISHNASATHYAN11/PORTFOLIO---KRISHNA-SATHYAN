@@ -1,4 +1,4 @@
-import  { useState, useEffect, useMemo } from 'react';
+import  { useState, useEffect } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
 import Button from '../ui/Button';
@@ -9,21 +9,18 @@ import greenprofile from '../assets/greenprofile.webp';
 ========================================================= */
 
 const FallingLeaves = () => {
-  const leaves = useMemo(
-    () =>
-      Array.from({ length: 14 }).map((_, i) => ({
-        id: i,
-        left: `${Math.random() * 105 - 2}%`,
-        size: 16 + Math.random() * 18,
-        delay: Math.random() * 8,
-        duration: 12 + Math.random() * 12,
-        rotate: Math.random() * 360,
-        drift: Math.random() * 160 - 80,
-        opacity: 0.35 + Math.random() * 0.4,
-      })),
-    []
-  );
-
+const [leaves] = useState(() =>
+  Array.from({ length: 14 }).map((_, i) => ({
+    id: i,
+    left: `${Math.random() * 105 - 2}%`,
+    size: 16 + Math.random() * 18,
+    delay: Math.random() * 8,
+    duration: 12 + Math.random() * 12,
+    rotate: Math.random() * 360,
+    drift: Math.random() * 160 - 80,
+    opacity: 0.35 + Math.random() * 0.4,
+  }))
+);
   return (
     <div className="falling-leaves">
       {leaves.map((leaf) => (
@@ -86,43 +83,35 @@ const FallingLeaves = () => {
 /* =========================================================
    🌬️ FLOATING POLLEN
 ========================================================= */
-
 const FloatingParticles = () => {
-  const particles = useMemo(
-    () =>
-      Array.from({ length: 20 }).map((_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        top: `${Math.random() * 100}%`,
-        size: 2 + Math.random() * 4,
-        duration: 4 + Math.random() * 5,
-        delay: Math.random() * 4,
-      })),
-    []
+  const [particles] = useState(() =>
+    Array.from({ length: 20 }, (_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      size: 2 + Math.random() * 4,
+      duration: 4 + Math.random() * 5,
+      delay: Math.random() * 4,
+    }))
   );
 
   return (
-    <div className="floating-particles">
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
       {particles.map((particle) => (
-        <motion.span
+        <motion.div
           key={particle.id}
-          className="pollen"
+          className="absolute rounded-full bg-green-400"
           style={{
             left: particle.left,
             top: particle.top,
             width: particle.size,
             height: particle.size,
           }}
-          animate={{
-            x: [0, 20, -15, 0],
-            y: [0, -20, 10, 0],
-            opacity: [0.15, 0.7, 0.2, 0.15],
-          }}
+          animate={{ opacity: [0.2, 0.8, 0.2] }}
           transition={{
             duration: particle.duration,
             delay: particle.delay,
             repeat: Infinity,
-            ease: 'easeInOut',
           }}
         />
       ))}

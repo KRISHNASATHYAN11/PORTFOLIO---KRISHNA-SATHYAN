@@ -1,5 +1,5 @@
 
-import { useMemo } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
 import aboutGirl from '../assets/about-girl.webp';
@@ -9,19 +9,16 @@ import aboutGirl from '../assets/about-girl.webp';
 ========================================================= */
 
 const FloatingLeaves = () => {
-  const leaves = useMemo(
-    () =>
-      Array.from({ length: 14 }).map((_, index) => ({
-        id: index,
-        left: `${Math.random() * 100}%`,
-        size: 14 + Math.random() * 18,
-        delay: Math.random() * 6,
-        duration: 9 + Math.random() * 8,
-        drift: Math.random() * 100 - 50,
-        rotate: Math.random() * 360,
-      })),
-    []
-  );
+const [leaves] = useState(() =>
+  Array.from({ length: 14 }).map((_, index) => ({
+    id: index,
+    left: `${Math.random() * 100}%`,
+    size: 14 + Math.random() * 18,
+    delay: Math.random() * 6,
+    duration: 9 + Math.random() * 8,
+    drift: Math.random() * 100 - 50,
+  }))
+);
 
   return (
     <div className="about-floating-leaves">

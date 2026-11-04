@@ -19,7 +19,7 @@ const Footer = () => {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [messages.length]);
 
   return (
     <footer className="animated-footer">

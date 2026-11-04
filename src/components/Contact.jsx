@@ -1,5 +1,5 @@
 
-import  { useMemo, useState } from 'react';
+import  { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
 import Toast from '../ui/Toast';
@@ -11,19 +11,17 @@ import emailjs from '@emailjs/browser';
 ========================================================= */
 
 const FloatingLeaves = () => {
-  const leaves = useMemo(
-    () =>
-      Array.from({ length: 12 }).map((_, index) => ({
-        id: index,
-        left: `${Math.random() * 100}%`,
-        size: 14 + Math.random() * 16,
-        delay: Math.random() * 5,
-        duration: 8 + Math.random() * 7,
-        drift: Math.random() * 100 - 50,
-        rotate: Math.random() * 360,
-      })),
-    []
-  );
+const [leaves] = useState(() =>
+  Array.from({ length: 12 }).map((_, index) => ({
+    id: index,
+    left: `${Math.random() * 100}%`,
+    size: 14 + Math.random() * 16,
+    delay: Math.random() * 5,
+    duration: 8 + Math.random() * 7,
+    drift: Math.random() * 100 - 50,
+    rotate: Math.random() * 360,
+  }))
+);
 
   return (
     <div className="contact-floating-leaves">

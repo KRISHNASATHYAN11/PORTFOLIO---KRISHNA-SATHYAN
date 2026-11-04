@@ -1,5 +1,5 @@
 
-import { useMemo } from 'react';
+import { useState} from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
 
@@ -8,19 +8,17 @@ import { resumeData } from '../data/resumeData';
 ========================================================= */
 
 const FloatingLeaves = () => {
-  const leaves = useMemo(
-    () =>
-      Array.from({ length: 10 }).map((_, i) => ({
-        id: i,
-        left: `${Math.random() * 100}%`,
-        delay: Math.random() * 5,
-        duration: 9 + Math.random() * 7,
-        size: 18 + Math.random() * 16,
-        drift: Math.random() * 100 - 50,
-        rotation: Math.random() * 180,
-      })),
-    []
-  );
+ const [leaves] = useState(() =>
+  Array.from({ length: 10 }).map((_, i) => ({
+    id: i,
+    left: `${Math.random() * 100}%`,
+    delay: Math.random() * 5,
+    duration: 9 + Math.random() * 7,
+    size: 18 + Math.random() * 16,
+    drift: Math.random() * 100 - 50,
+    rotation: Math.random() * 180,
+  }))
+);
 
   return (
     <div className="experience-floating-leaves">
