@@ -1,5 +1,5 @@
 
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { resumeData } from '../data/resumeData';
 import aboutGirl from '../assets/about-girl.webp';
