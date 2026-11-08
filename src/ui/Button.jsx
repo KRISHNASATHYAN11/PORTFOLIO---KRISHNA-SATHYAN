@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const Button = ({ children, primary, outline, onClick, type = "button", style }) => {
+const Button = ({ children, primary, outline, onClick, type = "button", style, disabled = false }) => {
   const baseStyle = {
     padding: '12px 30px',
     borderRadius: '50px',
@@ -35,6 +35,7 @@ const Button = ({ children, primary, outline, onClick, type = "button", style })
     <motion.button
       type={type}
       onClick={onClick}
+      disabled={disabled}
       style={{ ...combinedStyle, ...style }}
       whileHover={{ scale: 1.05, y: -3 }}
       whileTap={{ scale: 0.95 }}

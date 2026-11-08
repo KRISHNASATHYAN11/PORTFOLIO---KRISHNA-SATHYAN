@@ -2,17 +2,179 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src//assets//ks.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>💚PORTFOLIO - KRISHNA SATHYAN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- ============================================================
+         PRIMARY SEO META
+         ============================================================ -->
+    <title>Krishna Sathyan | Software Developer & Botany Graduate Portfolio</title>
+    <meta
+      name="description"
+      content="Krishna Sathyan - Software Developer specializing in React, Node.js, and the MERN stack. A Botany graduate turned web developer cultivating clean code and user-friendly interfaces. Explore projects like Sportify, BookClub, and BuildManager."
+    />
+    <meta
+      name="keywords"
+      content="Krishna Sathyan, Software Developer, Web Developer, React Developer, MERN Stack, JavaScript, Node.js, Portfolio, Frontend Developer, Kerala Developer, Botany Graduate"
+    />
+    <meta name="author" content="Krishna Sathyan" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#2C5F2D" />
+    <meta name="color-scheme" content="light" />
+    <meta name="application-name" content="Krishna Sathyan Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Krishna Sathyan" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://krishnasathyan.dev/" />
+
+    <!-- ============================================================
+         OPEN GRAPH / FACEBOOK
+         ============================================================ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Krishna Sathyan Portfolio" />
+    <meta property="og:title" content="Krishna Sathyan | Software Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Botany graduate turned Software Developer. Explore my projects in React, Node.js, and full-stack development. Let's grow something together."
+    />
+    <meta property="og:url" content="https://krishnasathyan.dev/" />
+    <meta property="og:image" content="https://krishnasathyan.dev/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://krishnasathyan.dev/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Krishna Sathyan - Software Developer Portfolio Preview" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ============================================================
+         TWITTER CARDS
+         ============================================================ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Krishna Sathyan | Software Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Botany graduate turned Software Developer. Explore my React, Node.js, and full-stack projects."
+    />
+    <meta name="twitter:image" content="https://krishnasathyan.dev/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Krishna Sathyan - Software Developer Portfolio Preview" />
+
+    <!-- ============================================================
+         FAVICONS & ICONS
+         ============================================================ -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- ============================================================
+         FONT PRELOADING (eliminates render-blocking)
+         Using preconnect + font-display: swap strategy
+         ============================================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
-    
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
+
+    <!-- ============================================================
+         CRITICAL CSS (inline, above-the-fold)
+         Prevents FOUC and improves FCP/LCP
+         ============================================================ -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+      body{font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background-color:#FFFBF5;color:#2C3E50;line-height:1.6;overflow-x:clip}
+      h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;color:#2C5F2D;font-weight:700}
+      a{color:inherit;text-decoration:none}
+      img{max-width:100%;display:block;height:auto}
+      .skip-link{position:absolute;top:-100px;left:0;background:#2C5F2D;color:#fff;padding:12px 24px;z-index:99999;border-radius:0 0 8px 0;font-weight:600}
+      .skip-link:focus{top:0;outline:3px solid #97BC62;outline-offset:2px}
+      :focus-visible{outline:3px solid #2C5F2D;outline-offset:2px;border-radius:4px}
+      #root{min-height:100vh}
+      .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    </style>
+
+    <!-- ============================================================
+         STRUCTURED DATA (JSON-LD) - Person + WebSite
+         ============================================================ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Krishna Sathyan",
+        "url": "https://krishnasathyan.dev/",
+        "image": "https://krishnasathyan.dev/greenprofile.webp",
+        "jobTitle": "Software Developer",
+        "description": "Botany graduate turned Software Developer specializing in React, Node.js, and the MERN stack.",
+        "email": "mailto:krishnasathyan11@gmail.com",
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Kerala"
+        },
+        "knowsAbout": [
+          "React",
+          "Node.js",
+          "JavaScript",
+          "MongoDB",
+          "Express",
+          "HTML5",
+          "CSS3",
+          "TypeScript",
+          "Git",
+          "UI Design"
+        ],
+        "sameAs": [
+          "https://github.com/KRISHNASATHYAN11",
+          "https://www.linkedin.com/in/krishnasathyan07"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance / Remote"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Krishna Sathyan Portfolio",
+        "url": "https://krishnasathyan.dev/",
+        "author": {
+          "@type": "Person",
+          "name": "Krishna Sathyan"
+        },
+        "description": "Personal portfolio of Krishna Sathyan, Software Developer and Botany graduate.",
+        "inLanguage": "en-US"
+      }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="root"></div>
+    <noscript>
+      <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+        <h1>Krishna Sathyan - Software Developer</h1>
+        <p>This portfolio requires JavaScript to be enabled. Please enable JavaScript in your browser to view the full experience.</p>
+        <p>Contact: <a href="mailto:krishnasathyan11@gmail.com">krishnasathyan11@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/KRISHNASATHYAN11">github.com/KRISHNASATHYAN11</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/krishnasathyan07">linkedin.com/in/krishnasathyan07</a></p>
+      </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

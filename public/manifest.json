@@ -1,0 +1,45 @@
+{
+  "name": "Krishna Sathyan - Software Developer Portfolio",
+  "short_name": "Krishna Portfolio",
+  "description": "Botany graduate turned Software Developer. Explore my React, Node.js, and full-stack projects.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FFFBF5",
+  "theme_color": "#2C5F2D",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "personal", "developer", "education"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Projects",
+      "short_name": "Projects",
+      "description": "Explore my creative garden of projects",
+      "url": "/#projects",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "Contact Me",
+      "short_name": "Contact",
+      "description": "Get in touch with me",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    },
+    {
+      "name": "About Me",
+      "short_name": "About",
+      "description": "Learn about my journey",
+      "url": "/#about",
+      "icons": [{ "src": "/favicon.svg", "sizes": "any" }]
+    }
+  ]
+}

@@ -13,26 +13,26 @@ export const resumeData = {
     title: "Nature & Code",
     tagline: "Bridging the gap between organic design and digital logic. I cultivate clean code and user-friendly interfaces with the patience of a gardener.",
     badges: [
-      { text: "Botany Graduate", icon: "fa-seedling", color: "badge-green" },
-      { text: "Software Developer", icon: "fa-code", color: "badge-brown" }
+      { text: "Botany Graduate", icon: "seedling", color: "badge-green" },
+      { text: "Software Developer", icon: "code", color: "badge-brown" }
     ]
   },
 
 skills: [
   // Tech Stack
-  { name: "HTML5", icon: "fa-html5", prefix: "fab" },
-  { name: "CSS3", icon: "fa-css3-alt", prefix: "fab" },
-  { name: "JavaScript", icon: "fa-js", prefix: "fab" },
-  { name: "React", icon: "fa-react", prefix: "fab" },
-  { name: "Node.js", icon: "fa-node", prefix: "fab" },
-  { name: "MongoDB", icon: "fa-database", prefix: "fas" },
-  { name: "TypeScript", icon: "fa-terminal", prefix: "fas" },
-  { name: "Git", icon: "fa-git-alt", prefix: "fab" },
+  { name: "HTML5", icon: "html5" },
+  { name: "CSS3", icon: "css3" },
+  { name: "JavaScript", icon: "javascript" },
+  { name: "React", icon: "react" },
+  { name: "Node.js", icon: "node" },
+  { name: "MongoDB", icon: "database" },
+  { name: "TypeScript", icon: "terminal" },
+  { name: "Git", icon: "git" },
 
   // Beyond Code
-  { name: "UI Design", icon: "fa-paint-brush", prefix: "fas" },
-  { name: "Photography", icon: "fa-camera", prefix: "fas" },
-  { name: "Gardening", icon: "fa-tree", prefix: "fas" },
+  { name: "UI Design", icon: "paintBrush" },
+  { name: "Photography", icon: "camera" },
+  { name: "Gardening", icon: "tree" },
 ],
 
   // Experience (Cloud Forest Removed)
@@ -66,6 +66,7 @@ projects: [
     category: "Sports Community Web Application",
     img: sportifyimg,
     type: "web",
+    repositoryUrl: null,
     desc: "A full-stack sports community platform connecting players, teams, tournaments, and sports venues. Features include turf discovery and booking, events, team creation, player profiles, tournaments, and admin management."
   },
 
@@ -75,6 +76,7 @@ projects: [
     category: "Book Marketplace Web Application",
     img: bookclubimg,
     type: "web",
+    repositoryUrl: null,
     desc: "A book marketplace web application where users can discover, buy, and sell books online, with an intuitive interface for browsing books and managing listings."
   },
 
@@ -84,6 +86,7 @@ projects: [
     category: "Construction Management Mobile App",
     img: buildmanagerimg,
     type: "mobile",
+    repositoryUrl: null,
     desc: "A mobile application designed to help contractors manage clients, purchases, expenses, income, calculations, and project-related details efficiently in one place."
   },
 
@@ -93,14 +96,15 @@ projects: [
     category: "School Management Web Application",
     img: schoolwebappimg,
     type: "web",
+    repositoryUrl: null,
     desc: "A school management platform that brings students, parents, and teachers together in one place to simplify communication, student information, academic activities, and daily administration."
   }
 ],
 
   // Socials
   socials: [
-    { name: "GitHub", icon: "fa-github", url: "https://github.com/KRISHNASATHYAN11" },
-    { name: "LinkedIn", icon: "fa-linkedin-in", url: "https://www.linkedin.com/in/krishnasathyan07" },
-    { name: "Email", icon: "fa-envelope", url: "mailto:krishnasathyan11@gmail.com" },
+    { name: "GitHub", icon: "github", url: "https://github.com/KRISHNASATHYAN11" },
+    { name: "LinkedIn", icon: "linkedin", url: "https://www.linkedin.com/in/krishnasathyan07" },
+    { name: "Email", icon: "envelope", url: "mailto:krishnasathyan11@gmail.com" },
   ]
 };

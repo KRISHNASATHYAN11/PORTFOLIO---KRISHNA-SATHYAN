@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Icon from './Icon';
 
 
 const Toast = ({ message, show}) => {
@@ -22,7 +23,7 @@ const Toast = ({ message, show}) => {
         zIndex: 2000,
       }}
     >
-      <i className="fas fa-check-circle" style={{ color: 'var(--forest-green)', fontSize: '1.2rem' }}></i>
+      <Icon name="checkCircle" style={{ color: 'var(--forest-green)', fontSize: '1.2rem' }} />
       <span>{message}</span>
     </motion.div>
   );

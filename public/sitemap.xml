@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://krishnasathyan.dev/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://krishnasathyan.dev/greenprofile.webp</image:loc>
+      <image:title>Krishna Sathyan - Software Developer</image:title>
+      <image:caption>Professional portrait of Krishna Sathyan</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://krishnasathyan.dev/og-image.jpg</image:loc>
+      <image:title>Krishna Sathyan Portfolio</image:title>
+    </image:image>
+  </url>
+
+  <!-- Section anchors (single-page app sections) -->
+  <url>
+    <loc>https://krishnasathyan.dev/#about</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://krishnasathyan.dev/#experience</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://krishnasathyan.dev/#projects</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://krishnasathyan.dev/#contact</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>

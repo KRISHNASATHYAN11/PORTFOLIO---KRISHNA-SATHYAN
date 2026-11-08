@@ -1,0 +1,19 @@
+# robots.txt - Krishna Sathyan Portfolio
+# Allow all crawlers full access
+
+User-agent: *
+Allow: /
+Disallow:
+
+# Allow specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for politeness
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://krishnasathyan.dev/sitemap.xml
